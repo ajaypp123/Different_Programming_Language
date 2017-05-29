@@ -1,0 +1,39 @@
+// java
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+class tuna extends JFrame
+{
+	private JComboBox box;
+	private JLabel picture;
+	
+	private static String[] filename = {"item1","item2","item3","item4"};
+	
+	public tuna()
+	{
+		super("Title");
+		setLayout(new FlowLayout());
+		
+		box = new JComboBox(filename);
+		add(box);
+		
+		picture = new JLabel("item list");
+		add(picture);
+	
+	}
+}
+
+class myclass
+{
+	public static void main(String []args)
+	{
+		tuna obj = new tuna();
+		
+		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		obj.setSize(350,200);
+		obj.setVisible(true);
+	}
+}
+
